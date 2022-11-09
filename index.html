@@ -11,8 +11,35 @@
     <div class="container">
         <div class="starter column">
             <h1>Rock paper scissors</h1>
-            <div><img src="./assets/rock.png" alt=""></div>
-            <div><button id="start-button">Start Game</button></div>
+            <div><img src="./assets/pic.png" alt=""></div>
+            <div>
+                <button id="start-button">Start Game</button>
+            </div>
+        </div>
+        <div class="hide game-wrapper">
+            <div class="row justify-between w-30">
+                <div class="score">
+                    <label for="userChoice">I'm gonna go with:</label>
+                    <select name="userChoice" id="choices">
+                        <option class="choice" value="rock">
+                            Rock
+                        </option>
+                        <option class="choice" value="paper">
+                            Paper
+                        </option>
+                        <option class="choice" value="scissors">
+                            Scissors
+                        </option>
+                    </select>
+                </div>
+                <div class="score highest">High score:</div>
+                <div class="score current">Your score:</div>
+                <div class="score"><button id="go">Go</button></div>
+            </div>
+            <div class="game row justify-between">
+                <div class="hand left"><img class="user-hand" src="" alt=""></div>
+                <div class="hand right"><img class="random-hand" src="" alt=""></div>
+            </div>
         </div>
     </div>
 
