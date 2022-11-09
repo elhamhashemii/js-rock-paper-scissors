@@ -49,14 +49,39 @@ function getRandomChoice() {
 function showChoices () {
     userHand.src = `./assets/${userChoice}.png`
     randomHand.src = `./assets/${randomChoice}.png`
-    console.log({userChoice});
-    console.log({randomChoice});
 }
 
-showResultBtn.addEventListener("click", () => {
+const winner = document.querySelector(".winner")
+
+// const scores = document.querySelector(".scores")
+// let userScore = Number(document.querySelector("#user-score").innerText)
+// let computerScore = Number(document.querySelector("#computer-score").innerText)
+
+function showWinner(){
+//     scores.classList.remove("hide")
+    winner.classList.remove("hide")
+    if(userChoice == randomChoice){
+        winner.innerText = "Hahaha, the same!"
+    } else if(randomChoice == "rock" && userChoice == "scissors" || randomChoice == "scissors" && userChoice == "paper" || randomChoice == "paper" && userChoice == "rock"){
+        winner.innerText = "Computer wins!"
+    }else {
+        winner.innerText = "You win!"
+    }
+    // setTimeout(() => {
+    //     winner.classList.add("hide")
+    // }, 1500);
+}
+
+function showResults () {
     getRandomChoice()
     showChoices()
-})
+    // Also show winner
+    showWinner()
+}
+
+
+showResultBtn.addEventListener("click", showResults)
+
 
 
 

@@ -17,24 +17,29 @@
             </div>
         </div>
         <div class="hide game-wrapper">
-            <div class="row justify-between w-30">
-                <div class="score">
-                    <label for="userChoice">I'm gonna go with:</label>
-                    <select name="userChoice" id="choices">
-                        <option class="choice" value="rock">
-                            Rock
-                        </option>
-                        <option class="choice" value="paper">
-                            Paper
-                        </option>
-                        <option class="choice" value="scissors">
-                            Scissors
-                        </option>
-                    </select>
+            <div class="winner"></div>
+            <div class="row justify-between">
+                <div class="row justify-between w-30 scores hide">
+                    <div class="score">Computer score: <span id="computer-score"></span></div>
+                    <div class="score">Your score: <span id="user-score"></span></div>
                 </div>
-                <div class="score highest">High score:</div>
-                <div class="score current">Your score:</div>
-                <div class="score"><button id="go">Go</button></div>
+                <div class="row">
+                    <div class="score">
+                        <label for="userChoice">I'm gonna go with:</label>
+                        <select name="userChoice" id="choices">
+                            <option class="choice" value="rock">
+                                Rock
+                            </option>
+                            <option class="choice" value="paper">
+                                Paper
+                            </option>
+                            <option class="choice" value="scissors">
+                                Scissors
+                            </option>
+                        </select>
+                    </div>
+                    <div class="score"><button id="go">Go</button></div>
+                </div>
             </div>
             <div class="game row justify-between">
                 <div class="hand left"><img class="user-hand" src="" alt=""></div>

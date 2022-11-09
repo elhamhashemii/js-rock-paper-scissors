@@ -60,23 +60,28 @@
     display: none;
 }
 
-/* .game-wrapper{
-} */
+.game-wrapper{
+    width: 80vw;
+}
 
 .game{
-    /* border: 1px solid #9f98ff; */
-    width: 90vw;
     height: 70vh;
 }
 
-.score{
+.score, .winner{
     margin-bottom: 50px;
+}
+
+.winner{
+    font-size: 36px;
 }
 
 .hand{
     width: 50%;
     text-align: center;
 }
+
+
 
 .right{
     transform: rotate(-90deg);
@@ -94,7 +99,7 @@
     background-color: #9f98ff;
     color: #fff;
     font-weight: bolder;
-    margin: 0 20px;
+    margin: 0 12px;
 }
 
 #choices:focus{
@@ -105,4 +110,14 @@
 .choice{
     border: none;
     outline: none;
+}
+
+#go{
+    padding: 8px 24px;
+    border-radius: 12px;
+    background-color: #9f98ff;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
 }
